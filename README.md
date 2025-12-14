@@ -108,7 +108,35 @@ pip install -e .
 
 ### 3. プラグインのインストール
 
-このプラグインを使用するには、Claude Code でプラグインとして読み込みます。
+#### 方法1: マーケットプレイスからインストール（推奨）
+
+Claude Code でマーケットプレイスを追加し、プラグインをインストールします：
+
+```bash
+# マーケットプレイスを追加
+/plugin marketplace add native-browser-control-tools https://raw.githubusercontent.com/TomCat2357/NativeBrowserPlugin/master/.claude-plugin/marketplace.json
+
+# プラグインをインストール
+/plugin install native-browser-control
+```
+
+#### 方法2: GitHub から直接インストール
+
+```bash
+/plugin install github:TomCat2357/NativeBrowserPlugin
+```
+
+#### 方法3: ローカルからインストール（開発者向け）
+
+リポジトリをクローンして、ローカルからプラグインを読み込みます：
+
+```bash
+# リポジトリをクローン
+git clone https://github.com/TomCat2357/NativeBrowserPlugin.git
+
+# Claude Code でローカルプラグインとして読み込み
+/plugin install ./NativeBrowserPlugin
+```
 
 ## 使い方の例
 
