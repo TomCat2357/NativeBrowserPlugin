@@ -1,0 +1,17 @@
+---
+description: 前のページに戻る
+argument-hint: [browser=chrome|edge]
+allowed-tools: mcp__native-browser-control__chrome_back
+---
+
+前のページに戻ります（Alt+←）。
+
+**引数**
+- `browser`: 対象ブラウザ（chrome または edge、省略時: chrome）
+
+**手順**
+1. 引数から `browser` を解析
+2. `mcp__native-browser-control__chrome_back` を呼び出す
+   - `browser`: 解析した値（省略時は "chrome"）
+3. ページ遷移完了を確認
+4. ページロード待機として `/browser:wait 2` を推奨
