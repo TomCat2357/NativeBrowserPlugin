@@ -68,45 +68,7 @@ NativeBrowserControl は、Windows の UI Automation を使って Selenium な�
 
 ## セットアップ
 
-### 1. NativeBrowserControl MCP サーバーのインストール
-
-```powershell
-# NativeBrowserControl のディレクトリに移動
-cd path/to/NativeBrowserControl
-
-# 依存関係をインストール
-pip install -e .
-```
-
-### 2. .mcp.json に追加
-
-`.mcp.json` に以下を追加してください：
-
-```json
-{
-  "mcpServers": {
-    "native-browser-control": {
-      "command": "python",
-      "args": ["C:/path/to/NativeBrowserControl/native_browser_control_server.py"]
-    }
-  }
-}
-```
-
-または、コマンドが PATH に通っている場合：
-
-```json
-{
-  "mcpServers": {
-    "native-browser-control": {
-      "command": "native-browser-control",
-      "args": []
-    }
-  }
-}
-```
-
-### 3. プラグインのインストール
+### 1. プラグインのインストール
 
 #### 方法1: マーケットプレイスからインストール（推奨）
 
@@ -114,19 +76,13 @@ Claude Code でマーケットプレイスを追加し、プラグインをイ�
 
 ```bash
 # マーケットプレイスを追加
-/plugin marketplace add native-browser-control-tools https://raw.githubusercontent.com/TomCat2357/NativeBrowserPlugin/master/.claude-plugin/marketplace.json
+/plugin marketplace add TomCat2357/NativeBrowserControl
 
 # プラグインをインストール
 /plugin install native-browser-control
 ```
 
-#### 方法2: GitHub から直接インストール
-
-```bash
-/plugin install github:TomCat2357/NativeBrowserPlugin
-```
-
-#### 方法3: ローカルからインストール（開発者向け）
+#### 方法2: ローカルからインストール（開発者向け）
 
 リポジトリをクローンして、ローカルからプラグインを読み込みます：
 
@@ -137,6 +93,18 @@ git clone https://github.com/TomCat2357/NativeBrowserPlugin.git
 # Claude Code でローカルプラグインとして読み込み
 /plugin install ./NativeBrowserPlugin
 ```
+
+### 2. MCP サーバーの設定
+
+プラグインをインストールしたら、NativeBrowserControl MCP サーバーを設定します：
+
+```bash
+/add-to-config
+```
+
+このコマンドを実行すると、インストール方法（uvx / pip-editable / script）を選択し、必要な情報を入力することで、自動的に設定ファイル（`~/.claude.json` または `~/.codex/config.toml`）に MCP サーバーの設定が追加されます。
+
+**推奨設定**: uvx を使用した GitHub からの直接実行（インストール不要で常に最新版を使用できます）
 
 ## 使い方の例
 
