@@ -6,12 +6,13 @@ Claude Code から NativeBrowserControl MCP サーバーを使いやすくする
 
 NativeBrowserControl は、Windows の UI Automation を使って Selenium なしで Chrome / Edge を直接操作する MCP サーバーです。このプラグインは、そのツールを簡単に実行できるようにします。
 
-### スラッシュコマンド（全26個）
+### スラッシュコマンド（全27個）
 
 #### ブラウザ接続・管理
 - `/browser:list-windows` - 起動中のブラウザウィンドウ一覧を取得
 - `/browser:connect` - 指定ブラウザに接続（未起動なら起動）
 - `/browser:wait` - 指定秒数待機
+- `/browser:get-summary` - ブラウザの状態概要を一括取得（URL/タイトル、ウィンドウ状態、位置・サイズ、要素統計）
 
 #### ナビゲーション
 - `/browser:navigate` - 指定URLに移動
