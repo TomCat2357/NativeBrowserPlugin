@@ -94,6 +94,27 @@ git clone https://github.com/TomCat2357/NativeBrowserPlugin.git
 /plugin install ./NativeBrowserPlugin
 ```
 
+#### 方法3: ZIPダウンロードからインストール（SSH/Git接続不可環境向け）
+
+会社のセキュリティポリシー等でSSHやGit接続ができない場合は、ZIPファイルをダウンロードしてインストールできます：
+
+1. ブラウザで [GitHubリポジトリ](https://github.com/TomCat2357/NativeBrowserPlugin) にアクセス
+2. 緑色の「Code」ボタン → 「Download ZIP」をクリック
+3. ダウンロードしたZIPを展開
+
+```bash
+# 展開したフォルダからローカルマーケットプレイスとして追加
+/plugin marketplace add ./NativeBrowserPlugin-master
+
+# ローカル版プラグインをインストール
+/plugin install native-browser-control-local@native-browser-control-tools
+```
+
+または直接インストール：
+```bash
+/plugin install ./NativeBrowserPlugin-master
+```
+
 ### 2. MCP サーバーの設定
 
 プラグインをインストールしたら、NativeBrowserControl MCP サーバーを設定します：

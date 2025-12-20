@@ -26,6 +26,21 @@
       "license": "MIT",
       "keywords": ["browser", "automation", "chrome", "edge", "ui-automation", "mcp"],
       "category": "automation"
+    },
+    {
+      "name": "native-browser-control-local",
+      "source": ".",
+      "description": "Windows UI Automation経由でChrome/Edgeを制御するNativeBrowserControl MCPサーバーの操作を補助するプラグイン",
+      "version": "0.1.0",
+      "author": {
+        "name": "TomCat2357",
+        "email": "user@example.com"
+      },
+      "homepage": "https://github.com/TomCat2357/NativeBrowserControl",
+      "repository": "https://github.com/TomCat2357/NativeBrowserPlugin",
+      "license": "MIT",
+      "keywords": ["browser", "automation", "chrome", "edge", "ui-automation", "mcp"],
+      "category": "automation"
     }
   ]
 }
