@@ -9,6 +9,7 @@ allowed-tools: mcp__native-browser-control__chrome_scan_elements
 **引数**
 - `browser`: 対象ブラウザ（chrome または edge、省略時: chrome）
 - `control_type`: フィルターするコントロールタイプ（例: Button, Edit, Link）
+- `control_types`: 追加フィルタ用コントロールタイプ（複数指定可・OR、例: ["Button", "Link"]）
 - `max_elements`: 取得する最大要素数（省略時: 500）
 - `name_contains`: 要素名に含まれるべき文字列（部分一致）
 - `name_regex`: 要素名にマッチする正規表現
@@ -18,9 +19,9 @@ allowed-tools: mcp__native-browser-control__chrome_scan_elements
 - `min_width`: 最小幅（ピクセル）
 - `min_height`: 最小高さ（ピクセル）
 - `only_focusable`: キーボードフォーカス可能な要素のみ（true/false、省略時: false）
-- `start_index`: 取得開始インデックス（0-based）
-- `end_index`: 取得終了インデックス（0-based, inclusive）
+- `index_ranges`: 対象インデックス範囲（例: '1:4,10:-1'。start含む/end除外、負数OK）
 - `automation_id`: automation_idで一致させる値
+- `min_separator_count`: "Separator"が検知されるまで結果出力を遅らせる回数閾値（省略時: 0）
 
 **手順**
 1. 引数から各フィルターパラメータを解析
